@@ -6,7 +6,7 @@ import CheckBox from "../../components/CheckBox/Checkbox";
 const Nav = (props) => {
     const {searchValue, handleInput} = props;
     return (
-        <div className="nav-searchbox">
+        <div className="nav">
             <SearchBox searchValue={searchValue} handleInput={handleInput}/>
             <h1>Filter By Option</h1>
             <CheckBox />

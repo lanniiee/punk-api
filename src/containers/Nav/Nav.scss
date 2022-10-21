@@ -1,4 +1,4 @@
-.nav-searchbox {
+.nav {
     width: 32vw;
     height: 250vh;
     background-color: rgb(255, 255, 110);
@@ -14,8 +14,8 @@ h1 {
 }
 
 @media screen and (min-width: 820px) {
-    .nav-searchbox {
-        width: 20vw;
+    .nav {
+        width: 25vw;
         transition: 0.5s;
     }
 
