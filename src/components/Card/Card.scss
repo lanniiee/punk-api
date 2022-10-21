@@ -1,0 +1,41 @@
+img {
+    width: 70px;
+    height: 180px;
+}
+
+.card {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 350px;
+    padding: 10px;
+    margin: 5px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h3 {
+    font-size: 1rem;
+    padding: 2px;
+    text-align: center;
+}
+h4 {
+    font-size: 12px;
+    padding: 5px;
+}
+
+p {
+    width: 210px;
+    height: 70px;
+    padding: 10px;
+    text-align: justify;
+    border: 2px solid yellow;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-y: scroll;
+    margin: 5px;
+    font-size: 0.8rem;
+}
