@@ -1,6 +1,5 @@
 import "./CardList.scss";
 import Card from "../../components/Card/Card.jsx";
-import beers from "../../data/beers";
 
 const CardList = (props) => {
     const {beersArr} = props;
@@ -12,7 +11,7 @@ const CardList = (props) => {
                     name={beer.name}
                     firstbrewed={beer.first_brewed}
                     description={beer.description}
-                    img={beer.image_url}
+                    imageUrl={beer.image_url}
                     abv={beer.abv}
                 />
         )

@@ -9,3 +9,15 @@
         border-radius: 5px;
     }
 }
+
+@media screen and (min-width: 820px) {
+    .searchbox {
+        &__input {
+            width: 12vw;
+            transition: 0.5s;
+            height: 35px;
+            font-size: 1.2em;
+            padding: 5px;
+        }
+    }
+}
