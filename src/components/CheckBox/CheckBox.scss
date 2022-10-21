@@ -1,0 +1,27 @@
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    &__option {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .checkbox__input {
+        margin-left: 15px;
+        height: 23px;
+        width: 23px;
+    }
+}
+
+.checkbox__label {
+    width: 150px;
+    height: 20px;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 820px) {
+    .checkbox__label {
+        font-size: 1rem;
+    }
+}

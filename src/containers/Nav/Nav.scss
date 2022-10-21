@@ -1,5 +1,5 @@
 .nav-searchbox {
-    width: 30vw;
+    width: 32vw;
     height: 250vh;
     background-color: rgb(255, 255, 110);
     position: sticky;
@@ -9,16 +9,17 @@
 
 h1 {
     font-size: 1rem;
-    padding: 10px;
+    padding: 10px 0;
+    text-align: center;
 }
 
 @media screen and (min-width: 820px) {
     .nav-searchbox {
-        width: 15vw;
+        width: 20vw;
         transition: 0.5s;
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
