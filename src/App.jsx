@@ -18,15 +18,32 @@ const App = () => {
     const data = await res.json();
     setBeers(data);
   }
+  
+  //This need attention
 
-  getBeers()
+  getBeers();
+
+  const handleCheckBox = (event) => {
+    if (event.target.checked) {
+      console.log("Hello")
+    } else {
+      console.log("checkbox is not checked...");
+    }
+  }
 
   const filteredBeer = beers.filter(beer => beer.name.toLowerCase().includes(searchValue.toLocaleLowerCase()))
 
   return (
     <div className="App">
-      <Nav searchValue={searchValue} handleInput={handleInput}/>
-      <CardList beersArr={filteredBeer}/>
+      <Nav 
+        searchValue={searchValue} 
+        handleInput={handleInput} 
+        handleCheckBox={handleCheckBox}
+      />
+
+        <CardList 
+          beersArr={filteredBeer} 
+        />
     </div>
   );
 }
