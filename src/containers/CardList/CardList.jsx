@@ -1,19 +1,18 @@
 import "./CardList.scss";
 import Card from "../../components/Card/Card.jsx";
 
-const CardList = (props) => {
-    const {beersArr} = props;
+const CardList = ({beersArr}) => {
 
     const beersDisplay = beersArr.map(beer => 
         (
-                <Card 
-                    key={beer.id}
-                    name={beer.name}
-                    firstbrewed={beer.first_brewed}
-                    description={beer.description}
-                    imageUrl={beer.image_url}
-                    abv={beer.abv}
-                />
+            <Card 
+                key={beer.id}
+                name={beer.name}
+                firstbrewed={beer.first_brewed}
+                description={beer.description}
+                imageUrl={beer.image_url}
+                abv={beer.abv}
+            />
         )
     )
     return (
