@@ -1,6 +1,6 @@
 .nav {
     width: 32vw;
-    height: 400vh;
+    height: 1020vh;
     background-color: rgb(255, 255, 110);
     position: sticky;
     margin-right: 20px;
@@ -13,8 +13,20 @@ h1 {
     text-align: center;
 }
 
+.nav-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
 @media screen and (min-width: 820px) {
     .nav {
+        height: 700vh;
         width: 25vw;
         transition: 0.5s;
     }
@@ -22,4 +34,29 @@ h1 {
     h1 {
         font-size: 1.3rem;
     }
+
+    .logo {
+        padding: 0;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .nav {
+        height: 470vh;
+        width: 25vw;
+        transition: 0.5s;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        padding: 0;
+        width: 140px;
+        height: 140px;
+    }
+
 }

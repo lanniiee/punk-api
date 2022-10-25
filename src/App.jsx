@@ -2,6 +2,7 @@ import './App.scss';
 import Nav from "./containers/Nav/Nav.jsx";
 import CardList from "./containers/CardList/CardList.jsx";
 import { useEffect, useState } from 'react';
+import CheckBox from './components/CheckBox/Checkbox';
 
 
 const App = () => {
@@ -29,13 +30,15 @@ const App = () => {
     if (event.target.checked) {
       if (event.target.value === "abv") {
         return setBeers(beers.filter(beer => beer.abv > 6))
-      } else if (event.target.value === "classic") {
-        setBeers(beers.filter(beer => beer.first_brewed.slice(3) < 2010))
-      } else if (event.target.value === "ph") {
-        setBeers(beers.filter(beer => beer.ph < 4)); 
+      } 
+      if (event.target.value === "classic") {
+        return setBeers(beers.filter(beer => beer.first_brewed.slice(3) < 2010))
+      } 
+      if (event.target.value === "ph") {
+        return setBeers(beers.filter(beer => beer.ph < 4)); 
       }
-    } else {
-      return getBeers();
+    } else if (!event.target.checked) {
+      return getBeers()
     }
   }
 
