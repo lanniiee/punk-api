@@ -1,7 +1,7 @@
 import './App.scss';
 import Nav from "./containers/Nav/Nav.jsx";
 import CardList from "./containers/CardList/CardList.jsx";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const App = () => {
@@ -12,22 +12,30 @@ const App = () => {
     setSearchValue(event.target.value)
   }
 
+  const url = `https://api.punkapi.com/v2/beers`;
+
   const getBeers = async () => {
-    const url = `https://api.punkapi.com/v2/beers`;
     const res = await fetch(url);
     const data = await res.json();
     setBeers(data);
   }
   
-  //This need attention
+  useEffect(() => {
+    getBeers(url);
+  }, []);
 
-  getBeers();
 
   const handleCheckBox = (event) => {
     if (event.target.checked) {
-      console.log("Hello")
+      if (event.target.value === "abv") {
+        return setBeers(beers.filter(beer => beer.abv > 6))
+      } else if (event.target.value === "classic") {
+        setBeers(beers.filter(beer => beer.first_brewed.slice(3) < 2010))
+      } else if (event.target.value === "ph") {
+        setBeers(beers.filter(beer => beer.ph < 4)); 
+      }
     } else {
-      console.log("checkbox is not checked...");
+      return getBeers();
     }
   }
 
