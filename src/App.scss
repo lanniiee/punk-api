@@ -6,3 +6,15 @@
 .App {
     display: flex;
 }
+
+.main-body__title {
+    text-align: start;
+    font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1020px) {
+    .main-body__title {
+    text-align: center;
+    font-size: 2rem;
+    }
+}

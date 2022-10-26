@@ -36,6 +36,8 @@ p {
     overflow-y: scroll;
     margin: 5px;
     font-size: 0.8rem;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 @media screen and (min-width: 800px) {

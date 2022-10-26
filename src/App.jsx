@@ -68,9 +68,13 @@ const App = () => {
         handlePh={handlePh}
       />
 
+      <main className='main-boddy'>
+        <h1 className='main-body__title'>All Glorious Beers</h1>
         <CardList 
           beersArr={filteredBeer} 
         />
+      </main>
+      
     </div>
   );
 }
