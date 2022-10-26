@@ -41,15 +41,17 @@ const App = () => {
   } 
 
   useEffect(() => {
+    let checkedBeer = beersArr;
     if (abvBeers) {
-      setBeers(beersArr.filter(beer => beer.abv > 6))
-    } 
+      checkedBeer = checkedBeer.filter(beer => beer.abv > 6)
+    }
     if (classicBeers) {
-      setBeers(beersArr.filter(beer => beer.first_brewed.slice(3) < 2010))
-    }
+      checkedBeer = checkedBeer.filter(beer => beer.first_brewed.slice(3) < 2010)
+    } 
     if (phBeers) {
-      setBeers(beersArr.filter(beer => beer.ph < 4))
+      checkedBeer = checkedBeer.filter(beer => beer.ph < 4)
     }
+    setBeers(checkedBeer)
   }, [abvBeers, classicBeers, phBeers, beersArr])
 
 
