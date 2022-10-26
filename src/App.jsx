@@ -58,6 +58,7 @@ const App = () => {
   const filteredBeer = beers.filter(beer => beer.name.toLowerCase().includes(searchValue.toLocaleLowerCase()))
 
   return (
+
     <div className="App">
       <Nav 
         searchValue={searchValue} 

@@ -13,7 +13,31 @@
 @media screen and (min-width: 820px) {
     .searchbox {
         &__input {
-            width: 20vw;
+            width: 23vw;
+            transition: 0.5s;
+            height: 35px;
+            font-size: 1.2em;
+            padding: 5px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .searchbox {
+        &__input {
+            width: 19vw;
+            transition: 0.5s;
+            height: 35px;
+            font-size: 1.2em;
+            padding: 5px;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .searchbox {
+        &__input {
+            width: 14vw;
             transition: 0.5s;
             height: 35px;
             font-size: 1.2em;

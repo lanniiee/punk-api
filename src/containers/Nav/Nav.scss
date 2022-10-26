@@ -1,6 +1,6 @@
 .nav {
     width: 32vw;
-    height: 1020vh;
+    height: 1150vh;
     background-color: rgb(255, 255, 110);
     position: sticky;
     margin-right: 20px;
@@ -26,8 +26,8 @@ h1 {
 
 @media screen and (min-width: 820px) {
     .nav {
-        height: 700vh;
-        width: 25vw;
+        height: 680vh;
+        width: 24vw;
         transition: 0.5s;
     }
 
@@ -42,10 +42,29 @@ h1 {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     .nav {
         height: 470vh;
-        width: 25vw;
+        width: 20vw;
+        transition: 0.5s;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        padding: 0;
+        width: 140px;
+        height: 140px;
+    }
+
+}
+
+@media screen and (min-width: 1800px) {
+    .nav {
+        height: 380vh;
+        width: 15vw;
         transition: 0.5s;
     }
 
