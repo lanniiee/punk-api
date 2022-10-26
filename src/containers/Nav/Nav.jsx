@@ -5,7 +5,7 @@ import logo from "../../assets/images/nw6qLM01.svg";
 
 
 const Nav = (props) => {
-    const {searchValue, handleInput, handleCheckBox} = props;
+    const {searchValue, handleInput, handleABV, handleClassic, handlePh} = props;
     return (
         <div className="nav">
             <div className="nav-logo">
@@ -13,7 +13,7 @@ const Nav = (props) => {
             </div>
             <SearchBox searchValue={searchValue} handleInput={handleInput}/>
             <h1>Filter By Option</h1>
-            <CheckBox handleCheckBox={handleCheckBox}/>
+            <CheckBox handleABV={handleABV} handleClassic={handleClassic} handlePh={handlePh}/>
         </div>
         
         

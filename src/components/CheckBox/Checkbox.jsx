@@ -1,6 +1,6 @@
 import "./CheckBox.scss";
 
-const CheckBox = ({handleCheckBox}) => {
+const CheckBox = ({handleABV, handleClassic, handlePh}) => {
     const highAbv = "High ABV (> 6.0%)";
     const classic = "Classic Range";
     const acidity = "Acidic (pH < 4)";
@@ -13,7 +13,7 @@ const CheckBox = ({handleCheckBox}) => {
                     className="checkbox__input" 
                     value="abv" 
                     type="checkbox" 
-                    onChange={handleCheckBox}/>
+                    onChange={handleABV}/>
             </div>
             <div className="checkbox__option">
                 <label className="checkbox__label">{classic}</label>
@@ -21,7 +21,7 @@ const CheckBox = ({handleCheckBox}) => {
                     className="checkbox__input" 
                     value="classic" 
                     type="checkbox" 
-                    onChange={handleCheckBox}
+                    onChange={handleClassic}
                 />
             </div>
             <div className="checkbox__option">
@@ -30,7 +30,7 @@ const CheckBox = ({handleCheckBox}) => {
                     className="checkbox__input" 
                     value="ph" 
                     type="checkbox"
-                    onChange={handleCheckBox} 
+                    onChange={handlePh} 
                 />
             </div>
         </div>
