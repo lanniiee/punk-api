@@ -2,7 +2,8 @@ import './App.scss';
 import Nav from "./containers/Nav/Nav.jsx";
 import CardList from "./containers/CardList/CardList.jsx";
 import { useEffect, useState } from 'react';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CardInfo from './components/CardInfo/CardInfo.jsx';
 
 const App = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -17,7 +18,7 @@ const App = () => {
   }
 
   const getBeers = async () => {
-    const url = `https://api.punkapi.com/v2/beers`;
+    const url = `https://api.punkapi.com/v2/beers?per_page=80`;
     const res = await fetch(url);
     const data = await res.json();
     setBeers(data);
@@ -60,21 +61,33 @@ const App = () => {
   return (
 
     <div className="App">
-      <Nav 
-        searchValue={searchValue} 
-        handleInput={handleInput} 
-        handleABV={handleABV}
-        handleClassic={handleClassic}
-        handlePh={handlePh}
-      />
-
-      <main className='main-boddy'>
-        <h1 className='main-body__title'>All Glorious Beers</h1>
-        <CardList 
-          beersArr={filteredBeer} 
+      <Router>
+        <Nav 
+          searchValue={searchValue} 
+          handleInput={handleInput} 
+          handleABV={handleABV}
+          handleClassic={handleClassic}
+          handlePh={handlePh}
         />
-      </main>
-      
+
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <CardList 
+                beersArr={filteredBeer} />
+            }
+          />
+
+        <Route
+            path='/beer/:beerId'
+            element={
+              <CardInfo
+                beersArr={beersArr} />
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

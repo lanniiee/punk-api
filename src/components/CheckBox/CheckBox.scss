@@ -1,5 +1,5 @@
 .checkbox {
-    display: flex;
+    display: none;
     flex-direction: column;
     &__option {
         padding: 5px;
@@ -21,6 +21,15 @@
 }
 
 @media screen and (min-width: 820px) {
+    .checkbox {
+        display: block;
+        flex-direction: column;
+        &__option {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        }
+    }
     .checkbox__label {
         font-size: 1rem;
         font-weight: 500;

@@ -5,6 +5,7 @@
 
 .App {
     display: flex;
+    flex-direction: column;
 }
 
 .main-body__title {
@@ -12,7 +13,10 @@
     font-size: 1.4rem;
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 820px) {
+    .App {
+        flex-direction: row;
+    }
     .main-body__title {
     text-align: center;
     font-size: 2rem;

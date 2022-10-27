@@ -12,6 +12,7 @@ const CardList = ({beersArr}) => {
                 description={beer.description}
                 imageUrl={beer.image_url}
                 abv={beer.abv}
+                beerId={beer.id}
             />
         )
     )

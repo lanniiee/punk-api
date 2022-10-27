@@ -1,34 +1,35 @@
 .nav {
-    width: 32vw;
-    height: 1150vh;
+    display: flex;
+    width: 100vw;
     background-color: rgb(255, 255, 110);
-    position: sticky;
     margin-right: 20px;
     padding: 10px;
 }
 
 h1 {
-    font-size: 1rem;
-    padding: 10px 0;
+    display: none;
+    font-size: 0.6rem;
+    padding: 5px 0;
     text-align: center;
 }
 
 .nav-logo {
     display: flex;
     justify-content: center;
+    margin-right: 120px;
 }
 
 .logo {
     padding: 0;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 
 @media screen and (min-width: 820px) {
     .nav {
-        height: 680vh;
         width: 25vw;
         transition: 0.5s;
+        flex-direction: column;
     }
 
     h1 {
@@ -44,12 +45,12 @@ h1 {
 
 @media screen and (min-width: 1200px) {
     .nav {
-        height: 470vh;
         width: 20vw;
         transition: 0.5s;
     }
 
     h1 {
+        display: block;
         font-size: 1.3rem;
     }
 
@@ -63,7 +64,6 @@ h1 {
 
 @media screen and (min-width: 1800px) {
     .nav {
-        height: 380vh;
         width: 15vw;
         transition: 0.5s;
     }

@@ -1,7 +1,12 @@
 .searchbox {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    display: flex;
     &__input {
-        width: 23vw;
-        margin: 5px;
+        width: 35vw;
+        margin: 17px 10px;
+        margin-top: 25px;
         height: 20px;
         font-size: 0.8rem;
         padding: 5px;
@@ -12,8 +17,9 @@
 
 @media screen and (min-width: 820px) {
     .searchbox {
+        margin-left: 5px;
         &__input {
-            width: 23vw;
+            width: 22vw;
             transition: 0.5s;
             height: 35px;
             font-size: 1.2em;
