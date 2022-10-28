@@ -7,3 +7,11 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+@media screen and (min-width: 820px) {
+    .cards-container {
+        position: absolute;
+        width: 75%;
+        right: 0;
+    }
+}

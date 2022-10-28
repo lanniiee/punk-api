@@ -18,7 +18,7 @@ const CardInfo = ({beersArr}) => {
 
     return (
         <div className="beer-info">
-            <h2 className="beer-info__heading">{name}</h2>
+            <h2 className="beer-info__heading" id={name}>{name}</h2>
             <img 
                 src={image_url} 
                 alt={name} 
@@ -29,8 +29,9 @@ const CardInfo = ({beersArr}) => {
                 <h3>Alcohol Level: {abv}%</h3>
                 <h3>Acidity Level: {ph}</h3>
                 <h3 className="beer-info__tag">Tag Line: {tagline}</h3>
+                <h3 className="beer-info__heading">Description:</h3>
                 <p className="beer-info__description">{description}</p>
-                <h3 className="beer-info__pairing">Food Pairing:</h3>
+                <h3 className="beer-info__heading">Food Pairing:</h3>
                 <p className="beer-info__description">{food_pairing.join(", ")}.</p>
             </div>
 
