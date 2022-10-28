@@ -74,7 +74,7 @@ const App = () => {
 
         <Routes>
           <Route
-            path='/'
+            path='/punk-api'
             element={
               <CardList 
                 beersArr={filteredBeer} />
@@ -82,7 +82,7 @@ const App = () => {
           />
 
         <Route
-            path='/beer/:beerId'
+            path='/punk-api/beer/:beerId'
             element={
               <CardInfo
                 beersArr={beersArr} />
