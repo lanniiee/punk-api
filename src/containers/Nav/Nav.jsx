@@ -10,7 +10,7 @@ const Nav = (props) => {
     return (
         <div className="nav">
             <div className="nav-logo">
-                <Link to={'/'} className="home">
+                <Link to={'/punk-api'} className="home">
                     <img src={logo} alt="logo" className="logo"/>
                 </Link>
             </div>
