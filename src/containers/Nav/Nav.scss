@@ -3,8 +3,7 @@
     justify-content: space-between;
     width: 100vw;
     background-color: rgb(255, 255, 110);
-    margin-right: 20px;
-    padding: 10px;
+    padding: 5px;
 }
 
 h1 {
@@ -17,7 +16,6 @@ h1 {
 .nav-logo {
     display: flex;
     justify-content: center;
-    margin-right: 120px;
 }
 
 .logo {
@@ -26,9 +24,6 @@ h1 {
     height: 75px;
 }
 
-.nav__searchbox {
-    margin-right: 10px;
-}
 @media screen and (min-width: 820px) {
     .nav {
         transition: 0.2s;
@@ -55,7 +50,6 @@ h1 {
     
     .nav-logo {
         justify-content: center;
-        margin-left: 110px;
     }
 }
 

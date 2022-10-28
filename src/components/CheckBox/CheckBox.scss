@@ -1,6 +1,6 @@
 .checkbox {
-    display: none;
     flex-direction: column;
+    margin-right: 15px;
     &__option {
         padding: 5px;
         display: flex;
@@ -8,30 +8,35 @@
     }
 
     .checkbox__input {
-        margin-left: 15px;
-        height: 23px;
-        width: 23px;
+        margin-left: 5px;
+        height: 17px;
+        width: 17px;
     }
 }
 
 .checkbox__label {
-    width: 150px;
+    width: 120px;
     height: 20px;
     font-size: 0.8rem;
 }
 
 @media screen and (min-width: 820px) {
     .checkbox {
-        display: block;
         flex-direction: column;
         &__option {
         padding: 5px;
         display: flex;
         justify-content: space-between;
         }
+        .checkbox__input {
+            margin-left: 5px;
+            height: 25px;
+            width: 25px;
+        }
     }
     .checkbox__label {
         font-size: 1rem;
         font-weight: 500;
+        width: 150px;
     }
 }
