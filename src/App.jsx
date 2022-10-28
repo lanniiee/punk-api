@@ -23,6 +23,8 @@ const App = () => {
     const data = await res.json();
     setBeers(data);
     setBeersArr(data);
+    console.log(res['status'])
+
   }
   
   useEffect(() => {
